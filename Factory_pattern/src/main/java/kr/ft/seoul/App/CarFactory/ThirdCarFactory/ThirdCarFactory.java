@@ -4,7 +4,7 @@ import kr.ft.seoul.App.Car.*;
 import kr.ft.seoul.App.CarFactory.CarFactoryInterface;
 
 public class ThirdCarFactory implements CarFactoryInterface {
-    public Car manufactor(String productName) {
+    public Car manufacture(String productName) {
         Car car = null;
 
         if( productName.equalsIgnoreCase("Sonata")) {

@@ -22,7 +22,7 @@ public class SecondCarFactoryPositiveTest extends CarFactoryTestBase {
     public void SecondCarFactory_mabnufactor_Positive_Car() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Noname");
+        Car tempCar = carFactory.manufacture("Noname");
         assertTrue(isDefinitlyEqualsString(tempCar.toString(), "Noname"));
         assertTrue(tempCar instanceof Car);
     }
@@ -31,7 +31,7 @@ public class SecondCarFactoryPositiveTest extends CarFactoryTestBase {
     public void SecondCarFactory_mabnufactor_Positive_Sonata() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Sonata");
+        Car tempCar = carFactory.manufacture("Sonata");
         assertTrue(isDefinitlyEqualsString(tempCar.toString(), "Sonata"));
         assertTrue(tempCar instanceof Sonata);
     }
@@ -40,7 +40,7 @@ public class SecondCarFactoryPositiveTest extends CarFactoryTestBase {
     public void SecondCarFactory_mabnufactor_Positive_Grandeur() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Grandeur");
+        Car tempCar = carFactory.manufacture("Grandeur");
         assertTrue(isDefinitlyEqualsString(tempCar.toString(), "Grandeur"));
         assertTrue(tempCar instanceof Grandeur);
     }
@@ -49,7 +49,7 @@ public class SecondCarFactoryPositiveTest extends CarFactoryTestBase {
     public void SecondCarFactory_mabnufactor_Positive_Genesis() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Genesis");
+        Car tempCar = carFactory.manufacture("Genesis");
         assertTrue(isDefinitlyEqualsString(tempCar.toString(), "Genesis"));
         assertTrue(tempCar instanceof Genesis);
     }
@@ -58,7 +58,7 @@ public class SecondCarFactoryPositiveTest extends CarFactoryTestBase {
     public void SecondCarFactory_mabnufactor_Positive_Error() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Error");
+        Car tempCar = carFactory.manufacture("Error");
         assertFalse(tempCar instanceof Sonata);
         assertFalse(isDefinitlyEqualsString(tempCar.toString(), "Sonata"));
         assertFalse(tempCar instanceof Grandeur);

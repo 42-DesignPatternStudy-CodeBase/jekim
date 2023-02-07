@@ -19,114 +19,114 @@ public class SecondCarFactoryNegativeTest extends CarFactoryTestBase {
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Car_00() {
+    public void SecondCarFactory_manufacture_Negative_Car_00() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Noname");
-        Car targetCar = carFactory.manufactor("Sonata");
+        Car tempCar = carFactory.manufacture("Noname");
+        Car targetCar = carFactory.manufacture("Sonata");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Car_01() {
+    public void SecondCarFactory_manufacture_Negative_Car_01() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Noname");
-        Car targetCar = carFactory.manufactor("Grandeur");
+        Car tempCar = carFactory.manufacture("Noname");
+        Car targetCar = carFactory.manufacture("Grandeur");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Car_02() {
+    public void SecondCarFactory_manufacture_Negative_Car_02() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Noname");
-        Car targetCar = carFactory.manufactor("Genesis");
+        Car tempCar = carFactory.manufacture("Noname");
+        Car targetCar = carFactory.manufacture("Genesis");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Sonata_00() {
+    public void SecondCarFactory_manufacture_Negative_Sonata_00() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Sonata");
-        Car targetCar = carFactory.manufactor("Grandeur");
+        Car tempCar = carFactory.manufacture("Sonata");
+        Car targetCar = carFactory.manufacture("Grandeur");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Sonata_01() {
+    public void SecondCarFactory_manufacture_Negative_Sonata_01() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Sonata");
-        Car targetCar = carFactory.manufactor("Genesis");
+        Car tempCar = carFactory.manufacture("Sonata");
+        Car targetCar = carFactory.manufacture("Genesis");
         assertFalse(targetCar.getClass() == tempCar.getClass());        
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Sonata_02() {
+    public void SecondCarFactory_manufacture_Negative_Sonata_02() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Sonata");
-        Car targetCar = carFactory.manufactor("Noname");
+        Car tempCar = carFactory.manufacture("Sonata");
+        Car targetCar = carFactory.manufacture("Noname");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
 
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Grandeur_00() {
+    public void SecondCarFactory_manufacture_Negative_Grandeur_00() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Grandeur");
-        Car targetCar = carFactory.manufactor("Noname");
+        Car tempCar = carFactory.manufacture("Grandeur");
+        Car targetCar = carFactory.manufacture("Noname");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Grandeur_01() {
+    public void SecondCarFactory_manufacture_Negative_Grandeur_01() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Grandeur");
-        Car targetCar = carFactory.manufactor("Sonata");
+        Car tempCar = carFactory.manufacture("Grandeur");
+        Car targetCar = carFactory.manufacture("Sonata");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Grandeur_02() {
+    public void SecondCarFactory_manufacture_Negative_Grandeur_02() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Grandeur");
-        Car targetCar = carFactory.manufactor("Genesis");
+        Car tempCar = carFactory.manufacture("Grandeur");
+        Car targetCar = carFactory.manufacture("Genesis");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
 
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Genesis_00() {
+    public void SecondCarFactory_manufacture_Negative_Genesis_00() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Genesis");
-        Car targetCar = carFactory.manufactor("Noname");
+        Car tempCar = carFactory.manufacture("Genesis");
+        Car targetCar = carFactory.manufacture("Noname");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 
     @Test
-    public void SecondCarFactory_manufactor_Negative_Genesis_01() {
+    public void SecondCarFactory_manufacture_Negative_Genesis_01() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Genesis");
-        Car targetCar = carFactory.manufactor("Granduer");
+        Car tempCar = carFactory.manufacture("Genesis");
+        Car targetCar = carFactory.manufacture("Granduer");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
  
     @Test
-    public void SecondCarFactory_manufactor_Negative_Genesis_02() {
+    public void SecondCarFactory_manufacture_Negative_Genesis_02() {
         SecondCarFactory carFactory = new SecondCarFactory();
 
-        Car tempCar = carFactory.manufactor("Genesis");
-        Car targetCar = carFactory.manufactor("Sonata");
+        Car tempCar = carFactory.manufacture("Genesis");
+        Car targetCar = carFactory.manufacture("Sonata");
         assertFalse(targetCar.getClass() == tempCar.getClass());
     }
 }

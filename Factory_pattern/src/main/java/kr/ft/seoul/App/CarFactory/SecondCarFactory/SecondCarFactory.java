@@ -5,7 +5,7 @@ import kr.ft.seoul.App.CarFactory.CarFactoryInterface;
 
 
 public class SecondCarFactory implements CarFactoryInterface {
-    public Car manufactor(String productName) {
+    public Car manufacture(String productName) {
         if (productName.compareTo("Sonata") == 0)
             return CarFactoryMethod.SONATA.create();
         if (productName.compareTo("Grandeur") == 0)
