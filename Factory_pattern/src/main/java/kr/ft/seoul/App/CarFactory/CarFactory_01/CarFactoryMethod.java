@@ -30,3 +30,6 @@ public enum CarFactoryMethod {
 
     abstract protected Car create();
 }
+
+// Enum type은 추상메소드를 가질 수 있습니다.
+// Enum type내에서 선언된 추상메소드는 constant의 내부에서 구현을 할 수 있습니다.
