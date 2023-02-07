@@ -1,4 +1,4 @@
-package kr.ft.seoul.App.CarFactory.CarFactory_00;
+package kr.ft.seoul.App.CarFactory.FirstCarFactory;
 
 import kr.ft.seoul.App.Car.*;
 import java.util.function.Supplier;

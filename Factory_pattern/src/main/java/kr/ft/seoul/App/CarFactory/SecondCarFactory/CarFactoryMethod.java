@@ -1,4 +1,4 @@
-package kr.ft.seoul.App.CarFactory.CarFactory_01;
+package kr.ft.seoul.App.CarFactory.SecondCarFactory;
 
 import kr.ft.seoul.App.Car.*;
 

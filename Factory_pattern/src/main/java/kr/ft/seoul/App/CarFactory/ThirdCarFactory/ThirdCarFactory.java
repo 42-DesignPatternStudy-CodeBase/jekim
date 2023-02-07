@@ -1,9 +1,9 @@
-package kr.ft.seoul.App.CarFactory.OldFactory;
+package kr.ft.seoul.App.CarFactory.ThirdCarFactory;
 
 import kr.ft.seoul.App.Car.*;
 import kr.ft.seoul.App.CarFactory.CarFactoryInterface;
 
-public class OldCarFactory implements CarFactoryInterface {
+public class ThirdCarFactory implements CarFactoryInterface {
     public Car manufactor(String productName) {
         Car car = null;
 
@@ -14,7 +14,7 @@ public class OldCarFactory implements CarFactoryInterface {
         } else if( productName.equalsIgnoreCase("Genesis")) {
             car = new Genesis();
         } else {
-            car = new Car("noname");
+            car = new Car("Noname");
         }
         return car;
     }
