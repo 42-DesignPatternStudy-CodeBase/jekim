@@ -3,29 +3,30 @@ package kr.ft.seoul.App;
 import kr.ft.seoul.App.Beverage.*;
 import kr.ft.seoul.App.Beverage.Condiment.*;
 import kr.ft.seoul.App.Calculator.DoublePrecisionCompensator;
+import kr.ft.seoul.App.BeveragePrettyPrinter.*;
 
 public class App
-{
-    public static void printPrice(Beverage beverage) {
-        DoublePrecisionCompensator doublePrecisionCompensator = new DoublePrecisionCompensator();
-        System.out.println(beverage.getDescription() + " : $" + doublePrecisionCompensator.correctPrecisionError(beverage.cost(), 3));
-    }
-    
+{   
     public static void main( String[] args )
     {
+        BeveragePrettyPrinter beveragePrettyPrinter = new BeveragePrettyPrinter();
+        
         Beverage beverage1 = new Espresso();
+        beverage1 = new SoyMilk(beverage1);
+        beverage1 = new Whip(beverage1);
+        beverage1 = new Mocha(beverage1);
+        beverage1 = new Whip(beverage1);
+        beverage1 = new Whip(beverage1);
 
-        printPrice(beverage1);
+        beveragePrettyPrinter.printBeverage(beverage1);
+        
 
         Beverage beverage2 = new HouseBlend();
+        beverage2 = new SoyMilk(beverage2);
+        beverage2 = new SoyMilk(beverage2);
+        beverage2 = new Whip(beverage2);
         beverage2 = new Mocha(beverage2);
 
-        printPrice(beverage2);
-
-        Beverage beverage3 = new DarkRoast();
-        beverage3 = new Mocha(beverage3);
-        beverage3 = new SoyMilk(beverage3);
-
-        printPrice(beverage3);
+        beveragePrettyPrinter.printBeverage(beverage2);
     }
 }
