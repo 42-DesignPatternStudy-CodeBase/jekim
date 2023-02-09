@@ -13,7 +13,7 @@ class routineThread extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.print(CounterSingleton.getInstance().getCount() + " ");
+            System.out.print(CounterSingletonLazyHolder.getInstance().getCount() + " ");
         }
     }
 }
