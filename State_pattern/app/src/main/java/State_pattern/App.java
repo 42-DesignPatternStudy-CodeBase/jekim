@@ -1,11 +1,13 @@
 package State_pattern;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import State_pattern.Character.Character;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Character jekim = new Character("jekim");
+
+        jekim.jump();
+        jekim.run();
+        jekim.showState();
     }
 }

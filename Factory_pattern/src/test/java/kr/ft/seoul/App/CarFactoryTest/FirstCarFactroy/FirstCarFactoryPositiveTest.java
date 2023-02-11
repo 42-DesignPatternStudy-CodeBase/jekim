@@ -70,21 +70,3 @@ public class FirstCarFactoryPositiveTest extends CarFactoryTestBase {
         assertTrue(isDefinitlyEqualsString(tempCar.toString(), "Noname"));
     }
 }
-
-
-
-
-
-// {
-//     FirstCarFactory carFactory = new FirstCarFactory();
-
-//     Car mycar1 = carFactory.manufacture("Sonata");
-//     Car mycar2 = carFactory.manufacture("Genesis");
-//     Car mycar3 = carFactory.manufacture("Grandeur");
-//     Car mycar4 = carFactory.manufacture("what?");
-
-
-//     System.out.println("Car category : " + mycar1.toString());
-//     System.out.println("Car category : " + mycar2.toString());
-//     System.out.println("Car category : " + mycar3.toString());
-//     System.out.println("Car category : " + mycar4.toString());
