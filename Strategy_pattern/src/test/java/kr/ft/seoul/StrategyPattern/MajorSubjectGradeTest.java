@@ -11,12 +11,14 @@ import kr.ft.seoul.StrategyPattern.Subject.Grade.Grade;
 import kr.ft.seoul.StrategyPattern.Subject.Grade.SubjectGradingStrategy.*;
 
 public class MajorSubjectGradeTest extends TestBaseClass {
+    int testMax = 1000;
+
     @Test
     public void GradeTest_MajorSubjectGrading_Positive_00()
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 95 and 100
             int score = (int)(Math.random() * 5) + 95;
@@ -31,7 +33,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 94 and 90
             int score = (int)(Math.random() * 5) + 90;
@@ -46,7 +48,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 89 and 80
             int score = (int)(Math.random() * 10) + 80;
@@ -61,7 +63,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 79 and 70
             int score = (int)(Math.random() * 10) + 70;
@@ -76,7 +78,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 69 and 60
             int score = (int)(Math.random() * 10) + 60;
@@ -91,7 +93,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 59 and 0
             int score = (int)(Math.random() * 60);
@@ -106,7 +108,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 0 and 100 without range between 95 and 100
             int score = getRandomIntWithoutRange(0, 100, 95, 100);
@@ -121,7 +123,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 0 and 100 without range between 90 and 94
             int score = getRandomIntWithoutRange(0, 100, 90, 94);
@@ -136,7 +138,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 0 and 100 without range between 80 and 89
             int score = getRandomIntWithoutRange(0, 100, 80, 89);
@@ -151,7 +153,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 0 and 100 without range between 70 and 79
             int score = getRandomIntWithoutRange(0, 100, 70, 79);
@@ -166,7 +168,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 0 and 100 without range between 60 and 69
             int score = getRandomIntWithoutRange(0, 100, 60, 69);
@@ -181,7 +183,7 @@ public class MajorSubjectGradeTest extends TestBaseClass {
     {
         SubjectGradingStrategy subjectGradingStrategy = new MajorSubjectGradingStrategy();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < testMax; i++)
         {
             // get random int between 0 and 100 without range between 0 and 59
             int score = getRandomIntWithoutRange(0, 100, 0, 59);

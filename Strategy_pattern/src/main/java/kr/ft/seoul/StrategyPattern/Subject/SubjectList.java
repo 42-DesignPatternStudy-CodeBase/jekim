@@ -44,4 +44,8 @@ public class SubjectList {
     public int getSubjectCount() {
         return subjects.size();
     }
+
+    public Subject getSubject(int index) {
+        return subjects.get(index);
+    }
 }

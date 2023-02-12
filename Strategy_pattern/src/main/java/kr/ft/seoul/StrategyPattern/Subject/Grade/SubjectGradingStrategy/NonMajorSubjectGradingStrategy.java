@@ -10,7 +10,7 @@ public class NonMajorSubjectGradingStrategy implements SubjectGradingStrategy {
             return Grade.B;
         } else if (score >= 70) {
             return Grade.C;
-        } else if (score >= 60) {
+        } else if (score >= 55) {
             return Grade.D;
         } else {
             return Grade.F;

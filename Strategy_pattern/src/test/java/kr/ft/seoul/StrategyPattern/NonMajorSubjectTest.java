@@ -95,7 +95,7 @@ public class NonMajorSubjectTest extends TestBaseClass {
     {
         for (int i = 0; i < testMax; i++)
         {
-            int score = getRandomInt(60, 69);
+            int score = getRandomInt(55, 69);
             Subject subject = new Subject("Korean", score, false);
 
             assertEquals(score, subject.getScore());
@@ -108,7 +108,7 @@ public class NonMajorSubjectTest extends TestBaseClass {
     {
         for (int i = 0; i < testMax; i++)
         {
-            int score = getRandomInt(0, 59);
+            int score = getRandomInt(0, 54);
             Subject subject = new Subject("Korean", score, false);
 
             assertEquals(score, subject.getScore());
@@ -157,7 +157,7 @@ public class NonMajorSubjectTest extends TestBaseClass {
     {
         for (int i = 0; i < testMax; i++)
         {
-            int score = getRandomIntWithoutRange(0, 100, 60, 69);
+            int score = getRandomIntWithoutRange(0, 100, 55, 69);
             Subject subject = new Subject("Korean", score, false);
 
             assertTrue(isDefinitlyEqualsString("D", subject.getGrade()) == false);
@@ -169,7 +169,7 @@ public class NonMajorSubjectTest extends TestBaseClass {
     {
         for (int i = 0; i < testMax; i++)
         {
-            int score = getRandomIntWithoutRange(0, 100, 0, 59);
+            int score = getRandomIntWithoutRange(0, 100, 0, 54);
             Subject subject = new Subject("Korean", score, false);
 
             assertTrue(isDefinitlyEqualsString("F", subject.getGrade()) == false);

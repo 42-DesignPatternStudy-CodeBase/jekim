@@ -20,8 +20,7 @@ public class NonMajorSubjectGradeTest extends TestBaseClass {
 
         for (int i = 0; i < testMax; i++)
         {
-            // get random int between 90 and 100
-            int score = (int)(Math.random() * 10) + 90;
+            int score = getRandomInt(90, 100);
             Grade grade = subjectGradingStrategy.getGradeByScore(score);
             assertTrue(grade == Grade.A);
             assertTrue(isDefinitlyEqualsString("A", grade.toString()) == true);
@@ -35,8 +34,7 @@ public class NonMajorSubjectGradeTest extends TestBaseClass {
 
         for (int i = 0; i < testMax; i++)
         {
-            // get random int between 89 and 80
-            int score = (int)(Math.random() * 10) + 80;
+            int score = getRandomInt(80, 89);
             Grade grade = subjectGradingStrategy.getGradeByScore(score);
             assertTrue(grade == Grade.B);
             assertTrue(isDefinitlyEqualsString("B", grade.toString()) == true);
@@ -50,8 +48,7 @@ public class NonMajorSubjectGradeTest extends TestBaseClass {
 
         for (int i = 0; i < testMax; i++)
         {
-            // get random int between 79 and 70
-            int score = (int)(Math.random() * 10) + 70;
+            int score = getRandomInt(70, 79);
             Grade grade = subjectGradingStrategy.getGradeByScore(score);
             assertTrue(grade == Grade.C);
             assertTrue(isDefinitlyEqualsString("C", grade.toString()) == true);
@@ -65,8 +62,7 @@ public class NonMajorSubjectGradeTest extends TestBaseClass {
 
         for (int i = 0; i < testMax; i++)
         {
-            // get random int between 69 and 60
-            int score = (int)(Math.random() * 10) + 60;
+            int score = getRandomInt(55, 69);
             Grade grade = subjectGradingStrategy.getGradeByScore(score);
             assertTrue(grade == Grade.D);
             assertTrue(isDefinitlyEqualsString("D", grade.toString()) == true);
@@ -80,8 +76,7 @@ public class NonMajorSubjectGradeTest extends TestBaseClass {
 
         for (int i = 0; i < testMax; i++)
         {
-            // get random int between 59 and 0
-            int score = (int)(Math.random() * 60);
+            int score = getRandomInt(0, 54);
             Grade grade = subjectGradingStrategy.getGradeByScore(score);
             assertTrue(grade == Grade.F);
             assertTrue(isDefinitlyEqualsString("F", grade.toString()) == true);
@@ -141,7 +136,7 @@ public class NonMajorSubjectGradeTest extends TestBaseClass {
         for (int i = 0; i < testMax; i++)
         {
             // get random int between 0 and 100 without range 60 ~ 69
-            int score = getRandomIntWithoutRange(0, 100, 60, 69);
+            int score = getRandomIntWithoutRange(0, 100, 55, 69);
             Grade grade = subjectGradingStrategy.getGradeByScore(score);
             assertTrue(grade != Grade.D);
             assertTrue(isDefinitlyEqualsString("D", grade.toString()) == false);
@@ -156,7 +151,7 @@ public class NonMajorSubjectGradeTest extends TestBaseClass {
         for (int i = 0; i < testMax; i++)
         {
             // get random int between 0 and 100 without range 0 ~ 59
-            int score = getRandomIntWithoutRange(0, 100, 0, 59);
+            int score = getRandomIntWithoutRange(0, 100, 0, 55);
             Grade grade = subjectGradingStrategy.getGradeByScore(score);
             assertTrue(grade != Grade.F);
             assertTrue(isDefinitlyEqualsString("F", grade.toString()) == false);
