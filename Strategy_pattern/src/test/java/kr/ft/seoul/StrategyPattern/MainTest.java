@@ -73,12 +73,23 @@ public class MainTest extends TestBaseClass {
         for (int i = 0; i < testMax; i++)
         {
             beforeEach();
-            RandomCase_routine();
+            randomCase_routine_oneline();
             afterEach();
         }
     }
 
-    private void RandomCase_routine() {
+    @Test
+    public void ExampleCase_03()
+    {
+        for (int i = 0; i < testMax; i++)
+        {
+            beforeEach();
+            randomCase_routine_multiline();
+            afterEach();
+        }
+    }
+
+    private void randomCase_routine_oneline() {
         String studentName = getRandomString(8);
         int score = getRandomInt(0, 100);
         String subjectName = getRandomString(8);
@@ -97,6 +108,33 @@ public class MainTest extends TestBaseClass {
 
         student.showGradeInfo();
 
+        assertEquals(expectedOutput, outputMessage.toString());
+    }
+
+    private void randomCase_routine_multiline() {
+        final int testSubjectCount = 100;
+
+        String studentName = getRandomString(8);
+        String expectedOutput = "";
+        Student student = new Student(1000, studentName);
+
+        for (int i = 0; i < testSubjectCount; i++)
+        {
+            int score = getRandomInt(0, 100);
+            String subjectName = getRandomString(8);
+            boolean isMajor = getRandomInt(0, 100) % 2 == 0 ? true : false;
+            SubjectGradingStrategy subjectGradingStrategy = isMajor ? new MajorSubjectGradingStrategy() : new NonMajorSubjectGradingStrategy();
+
+            student.addSubject(subjectName, score, isMajor);
+
+            expectedOutput = expectedOutput + String.format(
+                "학생 %s의 %s 과목 성적은 %d점이고, 학점은 %s입니다.\n",
+                studentName,
+                subjectName,
+                score,
+                subjectGradingStrategy.getGradeByScore(score).toString());
+        }
+        student.showGradeInfo();
         assertEquals(expectedOutput, outputMessage.toString());
     }
 }
