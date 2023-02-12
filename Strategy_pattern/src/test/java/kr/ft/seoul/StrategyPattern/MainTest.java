@@ -13,8 +13,10 @@ import java.io.PrintStream;
 import java.util.function.Consumer;
 
 import kr.ft.seoul.StrategyPattern.Student.Student;
+import kr.ft.seoul.StrategyPattern.Subject.Grade.SubjectGradingStrategy.*;
 
 public class MainTest extends TestBaseClass {
+    int testMax = 1000;
     ByteArrayOutputStream outputMessage;
     final PrintStream originalOut = System.out;
 
@@ -59,6 +61,39 @@ public class MainTest extends TestBaseClass {
         student.addSubject("국어", 55, true);
         student.addSubject("수학", 55, false);
         student.addSubject("영어", 100, false);
+
+        student.showGradeInfo();
+
+        assertEquals(expectedOutput, outputMessage.toString());
+    }
+
+    @Test
+    public void ExampleCase_02()
+    {
+        for (int i = 0; i < testMax; i++)
+        {
+            beforeEach();
+            RandomCase_routine();
+            afterEach();
+        }
+    }
+
+    private void RandomCase_routine() {
+        String studentName = getRandomString(8);
+        int score = getRandomInt(0, 100);
+        String subjectName = getRandomString(8);
+        boolean isMajor = getRandomInt(0, 100) % 2 == 0 ? true : false;
+        SubjectGradingStrategy subjectGradingStrategy = isMajor ? new MajorSubjectGradingStrategy() : new NonMajorSubjectGradingStrategy();
+
+        Student student = new Student(1000, studentName);
+        student.addSubject(subjectName, score, isMajor);
+
+        final String expectedOutput = String.format(
+            "학생 %s의 %s 과목 성적은 %d점이고, 학점은 %s입니다.\n",
+            studentName,
+            subjectName,
+            score,
+            subjectGradingStrategy.getGradeByScore(score).toString());
 
         student.showGradeInfo();
 
