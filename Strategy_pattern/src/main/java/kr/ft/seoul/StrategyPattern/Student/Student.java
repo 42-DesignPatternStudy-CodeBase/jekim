@@ -26,9 +26,13 @@ public class Student {
         for (int i = 0; i < limit; i++) {
             Subject subject = subjectList.getSubject(i);
             System.out.println(
-                "학생 " + name + "의 " 
-                    + subject.getName() + " 과목 성적은 " + subject.getScore() + "점이고, "
-                    + "학점은 " + subject.getGrade() + "입니다."
+                String.format(
+                    "학생 %s의 %s 과목 성적은 %d점이고, 학점은 %s입니다.",
+                    this.name,
+                    subject.getName(),
+                    subject.getScore(),
+                    subject.getGrade()
+                )
             );
         }
     }
