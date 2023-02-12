@@ -1,7 +1,7 @@
 package CaffeKiosk.Beverage;
 
 public abstract class Beverage {
-    private String name;
+    private String beverageType;
     private String description;
     private double price;
     private BeverageSizeEnum size;
@@ -35,3 +35,6 @@ public abstract class Beverage {
 
     public abstract double cost();
 }
+
+// 파생형인 음료에서는 어떤 요구사항이 있는가?
+// 
