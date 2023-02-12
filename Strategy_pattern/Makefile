@@ -1,4 +1,4 @@
-JARFILE_NAME = template_project.jar
+JARFILE_NAME = StrategyPattern.jar
 
 SOURCE_PATH = src
 TARGET_PATH = target
