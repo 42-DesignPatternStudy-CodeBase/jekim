@@ -3,18 +3,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>kr.ft.seoul.dps</groupId>
-  <artifactId>template_project</artifactId>
+  <artifactId>TicketSellingApplication</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>template_project</name>
+  <name>TicketSellingApplication</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
-
+ </properties>
+  
   <build>
-    <finalName>template_project</finalName>
+    <finalName>TicketSellingApplication</finalName>
     <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -24,7 +24,7 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <mainClass>kr.ft.seoul.dps.App</mainClass>  
+                <mainClass>kr.ft.seoul.TicketSellingApplication.App</mainClass>  
               </manifest>
             </archive>
           </configuration>
