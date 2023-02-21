@@ -2,28 +2,19 @@ package kr.ft.seoul.PizzaFactory;
 
 import java.util.Scanner;
 
+import kr.ft.seoul.PizzaFactory.PizzaStore.PizzaFactory.*;
 import kr.ft.seoul.PizzaFactory.Pizza.*;
 
 public class App 
 {
     public static Pizza orderPizza(String type) {
-        Pizza pizza;
-
-        if (type.equals("cheese")) {
-            pizza = new CheesePizza();
-        } else if (type.equals("greek")) {
-            pizza = new GreekPizza();
-        } else if (type.equals("pepperoni")) {
-            pizza = new PepperoniPizza();
-        } else {
-            pizza = null;
-        }
-
+        PizzaFactory pf = new SimplePizzaFactory();
+        Pizza pizza = pf.createPizza(type);
         if (pizza != null) {
             pizza.prepare();
             pizza.bake();
             pizza.cut();
-            pizza.box();   
+            pizza.box();
         }
         return pizza;
     }
