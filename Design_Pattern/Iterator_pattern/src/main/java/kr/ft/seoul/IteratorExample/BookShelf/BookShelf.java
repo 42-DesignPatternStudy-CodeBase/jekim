@@ -35,6 +35,6 @@ public class BookShelf implements BookShelfAggregate {
     }
 
     public Iterator reverseIterator() {
-        return null;
+        return new BookShelfReverseIterator(this);
     }
 }
