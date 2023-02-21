@@ -13,7 +13,9 @@ public class App
         bookShelf.appendBook(new Book("Cinderella"));
         bookShelf.appendBook(new Book("Daddy-Long-Legs"));
 
-        Iterator it = bookShelf.iterator();
+        IteratorFactory iterGenerator = new IteratorFactory();
+
+        Iterator it = iterGenerator.create(bookShelf, 1);
         while (it.hasNext()) {
             Book book = (Book)it.next();
             System.out.println("" + book.getName());
