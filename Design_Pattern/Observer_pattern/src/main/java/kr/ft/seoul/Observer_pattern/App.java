@@ -1,13 +1,18 @@
 package kr.ft.seoul.Observer_pattern;
 
-/**
- * Hello world!
- *
- */
+import kr.ft.seoul.Observer_pattern.NumberGenerator.*;
+import kr.ft.seoul.Observer_pattern.Observer.*;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        NumberGenerator generator = new RandomNumberGenerator();
+        Observer observer1 = new DigitObserver();
+        Observer observer2 = new GraphObserver();
+
+        generator.addObserver(observer1);    
+        generator.addObserver(observer2);
+        generator.execute();
     }
 }
