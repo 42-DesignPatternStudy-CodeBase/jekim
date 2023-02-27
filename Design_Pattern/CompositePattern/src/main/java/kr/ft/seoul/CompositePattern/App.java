@@ -1,4 +1,4 @@
-package kr.ft.seoul.CompsitePattern;
+package kr.ft.seoul.CompositePattern;
 
 /**
  * Hello world!

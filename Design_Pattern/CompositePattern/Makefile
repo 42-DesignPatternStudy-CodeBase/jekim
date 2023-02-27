@@ -1,4 +1,4 @@
-JARFILE_NAME = CompsitePattern.jar
+JARFILE_NAME = CompositePattern.jar
 
 SOURCE_PATH = src
 TARGET_PATH = target

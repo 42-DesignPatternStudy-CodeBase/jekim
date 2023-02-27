@@ -2,11 +2,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>kr.ft.seoul.CompsitePattern</groupId>
-  <artifactId>CompsitePattern</artifactId>
+  <groupId>kr.ft.seoul.CompositePattern</groupId>
+  <artifactId>CompositePattern</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>CompsitePattern</name>
+  <name>CompositePattern</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,7 +14,7 @@
   </properties>
 
   <build>
-    <finalName>CompsitePattern</finalName>
+    <finalName>CompositePattern</finalName>
     <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -24,7 +24,7 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <mainClass>kr.ft.seoul.CompsitePattern.App</mainClass>  
+                <mainClass>kr.ft.seoul.CompositePattern.App</mainClass>  
               </manifest>
             </archive>
           </configuration>
