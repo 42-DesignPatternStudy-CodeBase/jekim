@@ -38,6 +38,7 @@ public class Main {
         NumberGenerator generator = new RandomNumberGenerator();
         Observer observer1 = new DigitObserver();
         Observer observer2 = new GraphObserver();
+        
     // ToDo
     }
 }
